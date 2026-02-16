@@ -21,7 +21,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         rel="noopener noreferrer"
         className="group block h-full"
       >
-        <Card className="h-full border-none shadow-none bg-secondary/20 overflow-hidden hover:bg-secondary/40 transition-colors duration-300 rounded-xl">
+        <Card className="h-full border-none shadow-none bg-[#f1f1f1] dark:bg-zinc-800/90 overflow-hidden hover:bg-[#e8e8e8] dark:hover:bg-zinc-700 transition-colors duration-300 rounded-xl">
           <CardContent className="p-6 md:p-8 flex flex-col h-full relative">
             {/* Visual Indicator of interactivity */}
             <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-2 group-hover:translate-x-0">
@@ -42,7 +42,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 {project.tags.map((tag) => (
                   <span 
                     key={tag} 
-                    className="px-3 py-1 bg-secondary text-secondary-foreground text-xs font-mono uppercase tracking-wider rounded-full"
+                    className="px-3 py-1 bg-zinc-200 dark:bg-zinc-700 text-foreground text-xs font-mono uppercase tracking-wider rounded-full"
                   >
                     {tag}
                   </span>
@@ -52,11 +52,22 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             
             {/* Optional Image Preview - handled conditionally */}
             {project.imageUrl && (
-              <div className="mt-6 rounded-lg overflow-hidden border border-border/50 shadow-sm group-hover:shadow-md transition-all duration-300">
+              <div className="mt-6 rounded-lg overflow-hidden border border-border/50 shadow-sm group-hover:shadow-md transition-all duration-300 bg-white">
                 <img 
                   src={project.imageUrl} 
                   alt={project.title}
-                  className="w-full h-48 object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-500"
+                  className="w-full h-auto object-contain object-center transition-all duration-500"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    const parent = target.parentElement;
+                    if (parent) {
+                      const fallback = document.createElement('div');
+                      fallback.className = 'w-full h-48 bg-muted flex items-center justify-center text-muted-foreground text-sm font-mono';
+                      fallback.innerText = '[ Preview Image Not Found ]';
+                      parent.appendChild(fallback);
+                    }
+                  }}
                 />
               </div>
             )}
