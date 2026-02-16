@@ -21,7 +21,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         rel="noopener noreferrer"
         className="group block h-full"
       >
-        <Card className="h-full border-none shadow-none bg-transparent overflow-hidden group-hover:bg-secondary/30 transition-colors duration-300 rounded-xl">
+        <Card className="h-full border-none shadow-none bg-secondary/20 overflow-hidden hover:bg-secondary/40 transition-colors duration-300 rounded-xl">
           <CardContent className="p-6 md:p-8 flex flex-col h-full relative">
             {/* Visual Indicator of interactivity */}
             <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-2 group-hover:translate-x-0">

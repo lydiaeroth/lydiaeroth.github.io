@@ -62,14 +62,14 @@ export default function Home() {
             </h2>
             <div className="prose prose-lg prose-gray">
               <p className="text-xl md:text-2xl leading-relaxed font-light text-foreground/90 font-display">
-                Hi! I’m Lydia. Welcome to my little corner of the internet.
+                Hi! I’m Lydia. Welcome to my corner of the internet.
               </p>
               <p className="text-lg md:text-xl leading-relaxed text-muted-foreground mt-6 font-sans">
                 I like tinkering with and building things—products, projects, board games. 
                 I’m fascinated by early-stage ventures. 
               </p>
               <p className="text-lg md:text-xl leading-relaxed text-muted-foreground mt-6 font-sans">
-                In my free time, I like bikes, long runs on the Puget Sound, and convincing my cat to join me on unsolicited adventures.
+                In my free time, I like bikes 🚲, long runs along the Puget Sound, and convincing my cat to join me on unsolicited adventures.
               </p>
             </div>
           </motion.div>

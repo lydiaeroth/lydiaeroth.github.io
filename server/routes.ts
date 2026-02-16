@@ -45,7 +45,7 @@ export async function registerRoutes(
       subtitle: "A health dashboard for type 1 diabetic athletes",
       link: "https://solistic.lydiaroth.com/",
       tags: ["Health Tech", "Dashboard"],
-      imageUrl: "https://images.unsplash.com/photo-1576091160550-2187d80018fd?q=80&w=2070&auto=format&fit=crop", // Placeholder image related to health/tech
+      imageUrl: "/attached_assets/IMG_9771.png", 
     });
   }
 
