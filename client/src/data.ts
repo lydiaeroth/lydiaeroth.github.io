@@ -25,7 +25,7 @@ export const projects: Project[] = [
     subtitle: "A health dashboard for type 1 diabetic athletes",
     link: "https://solistic.lydiaroth.com/",
     tags: ["Health Tech", "Dashboard"],
-    imageUrl: "/attached_assets/IMG_9771.png",
+    imageUrl: "/health-preview.png",
   },
 ];
 
