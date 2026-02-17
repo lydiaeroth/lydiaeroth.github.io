@@ -1,7 +1,6 @@
-import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
-import { type SocialLink } from "@shared/schema";
+import { cn } from "../lib/utils";
+import { type SocialLink } from "../data";
 import { 
   Github, 
   Linkedin, 

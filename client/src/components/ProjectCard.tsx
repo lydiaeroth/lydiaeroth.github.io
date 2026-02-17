@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { type Project } from "@shared/schema";
-import { Card, CardContent } from "@/components/ui/card";
+import { type Project } from "../data";
 
 interface ProjectCardProps {
   project: Project;
@@ -21,8 +20,8 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         rel="noopener noreferrer"
         className="group block h-full"
       >
-        <Card className="h-full border-none shadow-none bg-[#f1f1f1] dark:bg-zinc-800/90 overflow-hidden hover:bg-[#e8e8e8] dark:hover:bg-zinc-700 transition-colors duration-300 rounded-xl">
-          <CardContent className="p-6 md:p-8 flex flex-col h-full relative">
+        <div className="h-full bg-[#f1f1f1] dark:bg-zinc-800/90 overflow-hidden hover:bg-[#e8e8e8] dark:hover:bg-zinc-700 transition-colors duration-300 rounded-xl">
+          <div className="p-6 md:p-8 flex flex-col h-full relative">
             {/* Visual Indicator of interactivity */}
             <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-2 group-hover:translate-x-0">
               <ArrowUpRight className="w-6 h-6 text-muted-foreground" />
@@ -71,8 +70,8 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 />
               </div>
             )}
-          </CardContent>
-        </Card>
+          </div>
+        </div>
       </a>
     </motion.div>
   );
